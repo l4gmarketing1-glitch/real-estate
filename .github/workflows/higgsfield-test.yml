@@ -1,0 +1,31 @@
+name: Test Higgsfield
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: Model ID
+        required: true
+        default: higgsfield-ai/soul/v2/standard
+      input_json:
+        description: Model input JSON
+        required: true
+        default: '{"prompt":"Editorial portrait in soft daylight"}'
+permissions:
+  contents: read
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - name: Generate once with Higgsfield
+        run: node src/smoke.js
+        env:
+          HF_CREDENTIALS: ${{ secrets.HF_CREDENTIALS }}
+          HF_MODEL: ${{ inputs.model }}
+          HF_INPUT_JSON: ${{ inputs.input_json }}
