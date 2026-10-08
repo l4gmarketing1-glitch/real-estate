@@ -1,0 +1,12 @@
+{
+  "name": "higgsfield-integration",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "generate": "node --env-file-if-exists=.env src/cli.js",
+    "test": "node --test"
+  },
+  "dependencies": { "@higgsfield/client": "0.2.6" }
+}
