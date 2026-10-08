@@ -1,0 +1,42 @@
+name: Vila - Higgsfield walkthrough clips
+on:
+  push:
+    branches: [main]
+    paths: ['video-tour/start.json']
+  workflow_dispatch:
+    inputs:
+      scene:
+        description: Scene to generate (one clip consumes credits)
+        required: true
+        type: choice
+        options: [gradina, intrare, living, bucatarie, dormitoare, bai, veranda]
+permissions:
+  contents: read
+jobs:
+  clips:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        scene: ${{ github.event_name == 'workflow_dispatch' && fromJSON(format('["{0}"]', inputs.scene)) || fromJSON('["gradina","intrare","living","bucatarie","dormitoare","bai","veranda"]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Generate a property clip
+        run: node video-tour/generate.js site/assets work/clips "$SCENE"
+        env:
+          HF_CREDENTIALS: ${{ secrets.HF_CREDENTIALS }}
+          SCENE: ${{ matrix.scene }}
+      - name: Save videos and request IDs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vila-${{ matrix.scene }}
+          path: work/clips/
+          if-no-files-found: warn
+          retention-days: 14

@@ -1,0 +1,13 @@
+{
+  "model": "kling-video/v2.5-turbo/pro/image-to-video",
+  "parameters": {"duration":5,"cfg_scale":0.5,"negative_prompt":"distorted architecture, changing furniture, new rooms, new doors, moving walls, warped straight lines, people, camera shake, dramatic zoom, remove watermarks, remove logos"},
+  "scenes": [
+    {"id":"gradina","file":"gradina.jpg","prompt":"A very slow, stable cinematic push forward toward the swimming pool in this exact real estate photograph. Subtle natural movement in foliage and water only. Preserve the pool shape, garden layout, building geometry, all objects and all existing watermarks exactly. No new objects, no people, no renovations. Photorealistic, natural daylight, gentle movement, no cuts."},
+    {"id":"intrare","file":"hol.jpg","prompt":"A very slow, stable real estate camera push forward of only a few centimeters into this exact entrance hall. Preserve every door, staircase, floor pattern, furniture item and existing watermark. Do not open doors, do not invent rooms or change architecture. Photorealistic daylight. No people, no cuts."},
+    {"id":"living","file":"dining.jpg","prompt":"A subtle slow cinematic push toward the dining table in this exact photograph, like a stabilized real estate camera. Preserve all architecture, furniture, floor texture, doors and existing watermarks. No people, no added objects, no redesign, no cuts. Natural warm daylight."},
+    {"id":"bucatarie","file":"bucatarie.jpg","prompt":"A slow and very subtle forward camera move in this exact kitchen. Keep the cabinetry, windows, appliances, counters, proportions and all existing watermarks unchanged. All objects remain still. Photorealistic real estate cinematography, stable camera, no people, no cuts."},
+    {"id":"dormitoare","file":"dormitor.jpg","prompt":"A gentle slow camera push forward inside this exact bedroom. Preserve the bed, wooden furniture, carpet, paintings, architecture and existing watermarks. No objects move or change. Natural daylight, stable real estate cinematography, no people, no cuts."},
+    {"id":"bai","file":"baie-albastra.jpg","prompt":"A very subtle stable camera push forward inside this exact blue bathroom. Keep all fixtures, tile patterns, walls, windows, proportions and existing watermarks unchanged. No new objects, no people, no cuts, photorealistic daylight."},
+    {"id":"veranda","file":"veranda.jpg","prompt":"A very slow stabilized camera push toward the windows of this exact veranda. Preserve all furniture, wall decorations, windows, garden view and existing watermarks. No new objects or structural changes. Natural daylight, photorealistic real estate footage, no people, no cuts."}
+  ]
+}
