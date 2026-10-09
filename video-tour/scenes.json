@@ -1,13 +1,45 @@
 {
   "model": "kling-video/v2.5-turbo/pro/image-to-video",
-  "parameters": {"duration":5,"cfg_scale":0.5,"negative_prompt":"distorted architecture, changing furniture, new rooms, new doors, moving walls, warped straight lines, people, camera shake, dramatic zoom, remove watermarks, remove logos"},
+  "parameters": {
+    "duration": 5,
+    "cfg_scale": 0.5,
+    "negative_prompt": "static camera, freeze frame, slideshow, digital zoom only, fisheye, fast spin, camera shake, distorted architecture, morphing furniture, new objects, new rooms, missing doors, moving walls, bent straight lines, people, changing decor, removing logos, removing watermarks"
+  },
   "scenes": [
-    {"id":"gradina","file":"gradina.jpg","prompt":"A very slow, stable cinematic push forward toward the swimming pool in this exact real estate photograph. Subtle natural movement in foliage and water only. Preserve the pool shape, garden layout, building geometry, all objects and all existing watermarks exactly. No new objects, no people, no renovations. Photorealistic, natural daylight, gentle movement, no cuts."},
-    {"id":"intrare","file":"hol.jpg","prompt":"A very slow, stable real estate camera push forward of only a few centimeters into this exact entrance hall. Preserve every door, staircase, floor pattern, furniture item and existing watermark. Do not open doors, do not invent rooms or change architecture. Photorealistic daylight. No people, no cuts."},
-    {"id":"living","file":"dining.jpg","prompt":"A subtle slow cinematic push toward the dining table in this exact photograph, like a stabilized real estate camera. Preserve all architecture, furniture, floor texture, doors and existing watermarks. No people, no added objects, no redesign, no cuts. Natural warm daylight."},
-    {"id":"bucatarie","file":"bucatarie.jpg","prompt":"A slow and very subtle forward camera move in this exact kitchen. Keep the cabinetry, windows, appliances, counters, proportions and all existing watermarks unchanged. All objects remain still. Photorealistic real estate cinematography, stable camera, no people, no cuts."},
-    {"id":"dormitoare","file":"dormitor.jpg","prompt":"A gentle slow camera push forward inside this exact bedroom. Preserve the bed, wooden furniture, carpet, paintings, architecture and existing watermarks. No objects move or change. Natural daylight, stable real estate cinematography, no people, no cuts."},
-    {"id":"bai","file":"baie-albastra.jpg","prompt":"A very subtle stable camera push forward inside this exact blue bathroom. Keep all fixtures, tile patterns, walls, windows, proportions and existing watermarks unchanged. No new objects, no people, no cuts, photorealistic daylight."},
-    {"id":"veranda","file":"veranda.jpg","prompt":"A very slow stabilized camera push toward the windows of this exact veranda. Preserve all furniture, wall decorations, windows, garden view and existing watermarks. No new objects or structural changes. Natural daylight, photorealistic real estate footage, no people, no cuts."}
+    {
+      "id": "gradina",
+      "file": "gradina.jpg",
+      "prompt": "Professional real estate cinematography, one continuous 5-second shot based on this exact reference photograph. A stabilized crane-and-dolly move: camera glides forward approximately one meter and gently descends toward the pool, keeping the pool centered. Clear continuous foreground/background parallax through the shot. Visible steady motion starts immediately. Keep the existing architecture, room proportions, furniture, doors, windows, floor patterns, colors and all existing watermarks consistent. Only the viewpoint moves; objects stay fixed. Natural daylight, realistic optics, stable horizon, no cuts, no restyling."
+    },
+    {
+      "id": "intrare",
+      "file": "hol.jpg",
+      "prompt": "Professional real estate cinematography, one continuous 5-second shot based on this exact reference photograph. An eye-level gimbal walkthrough: camera travels forward one meter through the visible entrance hall toward the far door, with a gentle 10 degree pan toward the staircase. Strong readable depth and foreground parallax. Do not pass through doors or furniture. Keep the existing architecture, room proportions, furniture, doors, windows, floor patterns, colors and all existing watermarks consistent. Only the viewpoint moves; objects stay fixed. Natural daylight, realistic optics, stable horizon, no cuts, no restyling."
+    },
+    {
+      "id": "living",
+      "file": "dining.jpg",
+      "prompt": "Professional real estate cinematography, one continuous 5-second shot based on this exact reference photograph. A cinematic lateral slider shot: camera trucks right approximately 60 centimeters with a gentle counter-pan left keeping the dining table as the subject. Near door frames and chairs shift relative to the background with clear physical parallax. Motion throughout the shot. Keep the existing architecture, room proportions, furniture, doors, windows, floor patterns, colors and all existing watermarks consistent. Only the viewpoint moves; objects stay fixed. Natural daylight, realistic optics, stable horizon, no cuts, no restyling."
+    },
+    {
+      "id": "bucatarie",
+      "file": "bucatarie.jpg",
+      "prompt": "Professional real estate cinematography, one continuous 5-second shot based on this exact reference photograph. A stabilized kitchen tracking shot: camera moves forward 80 centimeters along the existing aisle with a gentle pan toward the windows and countertop. Strong foreground/background parallax, real lens perspective, visible continuous motion from first frame. Keep the existing architecture, room proportions, furniture, doors, windows, floor patterns, colors and all existing watermarks consistent. Only the viewpoint moves; objects stay fixed. Natural daylight, realistic optics, stable horizon, no cuts, no restyling."
+    },
+    {
+      "id": "dormitoare",
+      "file": "dormitor.jpg",
+      "prompt": "Professional real estate cinematography, one continuous 5-second shot based on this exact reference photograph. A restrained 12 degree camera arc around the visible foot of the bed, moving laterally 60 centimeters, keeping the bed centered and staying within the visible room. Clearly changing perspective and foreground parallax, smooth stabilized gimbal movement. Keep the existing architecture, room proportions, furniture, doors, windows, floor patterns, colors and all existing watermarks consistent. Only the viewpoint moves; objects stay fixed. Natural daylight, realistic optics, stable horizon, no cuts, no restyling."
+    },
+    {
+      "id": "bai",
+      "file": "baie-albastra.jpg",
+      "prompt": "Professional real estate cinematography, one continuous 5-second shot based on this exact reference photograph. A short smooth lateral slider move of 35 centimeters to the left, with gentle counter-pan toward the bathtub. The sink moves in the foreground against the tiled wall, showing clear physical parallax. Stay inside the visible space. Keep the existing architecture, room proportions, furniture, doors, windows, floor patterns, colors and all existing watermarks consistent. Only the viewpoint moves; objects stay fixed. Natural daylight, realistic optics, stable horizon, no cuts, no restyling."
+    },
+    {
+      "id": "veranda",
+      "file": "veranda.jpg",
+      "prompt": "Professional real estate cinematography, one continuous 5-second shot based on this exact reference photograph. An elegant gimbal move forward 80 centimeters toward the glazed garden door, with a gentle pan right to reveal more of the already-visible garden view. Continuous visible motion, distinct parallax between the table and window frames. Keep the existing architecture, room proportions, furniture, doors, windows, floor patterns, colors and all existing watermarks consistent. Only the viewpoint moves; objects stay fixed. Natural daylight, realistic optics, stable horizon, no cuts, no restyling."
+    }
   ]
 }
